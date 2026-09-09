@@ -516,6 +516,71 @@ h1 {
   background: rgba(38, 165, 228, 0.16);
 }
 
+.collab {
+  display: flex;
+  justify-content: center;
+}
+
+.collab__link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 20px;
+  border: 1px solid rgba(223, 196, 255, 0.14);
+  border-radius: 999px;
+  text-decoration: none;
+  transition:
+    border-color 0.22s ease,
+    background 0.22s ease,
+    transform 0.22s ease;
+}
+
+.collab__link:hover,
+.collab__link:focus-visible {
+  border-color: rgba(223, 196, 255, 0.42);
+  background: rgba(223, 196, 255, 0.07);
+  transform: translateY(-1px);
+}
+
+.collab__link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
+.collab__label {
+  color: var(--brand-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.collab__mail {
+  color: var(--brand-lavender);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.collab__link:hover .collab__mail,
+.collab__link:focus-visible .collab__mail {
+  color: var(--brand-mint);
+}
+
+.collab__arrow {
+  color: var(--brand-muted);
+  font-size: 0.85rem;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease;
+}
+
+.collab__link:hover .collab__arrow,
+.collab__link:focus-visible .collab__arrow {
+  color: var(--text);
+  transform: translate(1px, -1px);
+}
+
 @keyframes pulse {
   0%,
   100% {
@@ -562,6 +627,11 @@ h1 {
 
   .tiles {
     grid-template-columns: 1fr;
+  }
+
+  .collab__link {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .identity__copy {
