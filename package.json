@@ -1,5 +1,5 @@
 {
-  "name": "maseaaao-stream",
+  "name": "maseaaao-tv",
   "private": true,
   "scripts": {
     "render:youtube-banner": "node scripts/render-scenes.mjs --scenes-dir src/banners --scene youtube-schedule.html --output-dir src/banners/rendered --width 2048 --height 1152 --format jpeg",

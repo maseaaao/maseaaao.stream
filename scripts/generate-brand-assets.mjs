@@ -13,7 +13,7 @@ const logoPath = path.join(
   "rendered",
   "maseaaao-dark.webp",
 );
-const qrUrl = "https://maseaaao.stream";
+const qrUrl = "https://maseaaao.tv";
 
 const palette = {
   ink: "#0f0b1a",
@@ -188,7 +188,7 @@ async function writeQrCode() {
   });
   await sharp(finished)
     .jpeg({ quality: 100, chromaSubsampling: "4:4:4" })
-    .toFile(path.join(assetsDir, "maseaaao.stream.jpeg"));
+    .toFile(path.join(assetsDir, "maseaaao.tv.jpeg"));
 }
 
 async function writeSocialImages() {
