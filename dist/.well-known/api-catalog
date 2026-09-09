@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://maseaaao.tv/",
+      "item": [
+        {
+          "href": "https://maseaaao.tv/",
+          "type": "text/html",
+          "title": "Главная страница maseaaao"
+        },
+        {
+          "href": "https://maseaaao.tv/check.html",
+          "type": "text/html",
+          "title": "Stream Checker — статус стрима"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://maseaaao.tv/manifest.webmanifest",
+          "type": "application/manifest+json"
+        }
+      ]
+    }
+  ]
+}

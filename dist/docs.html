@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <title>Документация — maseaaao.tv</title>
+    <meta
+      name="description"
+      content="Документация ресурсов maseaaao.tv: каталог для агентов, manifest, sitemap и robots.txt." />
+    <link rel="canonical" href="https://maseaaao.tv/docs.html" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0a0a0f;
+        --card: #12121a;
+        --card-2: #171722;
+        --border: #2b2b35;
+        --text: #f5f5f7;
+        --muted: #b8b8c2;
+        --accent: #c7a7ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 2rem 1rem 4rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 46rem;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        margin: 0 0 0.25rem;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin: 0 0 2rem;
+      }
+
+      section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.05rem;
+        margin: 0 0 0.5rem;
+      }
+
+      p {
+        margin: 0 0 0.5rem;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.9em;
+        background: var(--card-2);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 0.1rem 0.4rem;
+        color: var(--accent);
+        word-break: break-all;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>maseaaao.tv — документация</h1>
+      <p class="subtitle">
+        Человекочитаемая документация ресурсов сайта для людей и агентов.
+      </p>
+
+      <section>
+        <h2>Обзор</h2>
+        <p>
+          maseaaao.tv — статический сайт-хаб стримера maseaaao: стримы, клипы,
+          соцсети и контакты. Публичных серверных API нет — все ресурсы
+          отдаются как статические файлы по HTTPS.
+        </p>
+      </section>
+
+      <section>
+        <h2>Каталог для агентов (RFC 9727)</h2>
+        <p>
+          <code>GET /.well-known/api-catalog</code> — каталог ресурсов в
+          формате Linkset JSON (RFC 9264). Главная страница ссылается на него
+          через HTTP-заголовок <code>Link</code> с отношением
+          <code>rel="api-catalog"</code>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Machine-readable ресурсы</h2>
+        <p><code>/manifest.webmanifest</code> — web app манифест.</p>
+        <p><code>/sitemap.xml</code> — карта сайта.</p>
+        <p><code>/robots.txt</code> — правила для краулеров.</p>
+      </section>
+
+      <section>
+        <h2>Страницы</h2>
+        <p><code>/</code> — главная: Twitch, Telegram, YouTube, Instagram.</p>
+        <p>
+          <code>/check.html</code> — Stream Checker: статус стрима в реальном
+          времени.
+        </p>
+        <p><code>/docs.html</code> — эта страница.</p>
+      </section>
+
+      <p class="muted">
+        Заголовки обнаружения (RFC 8288 / RFC 9727) отдаются на главной:
+        <code>api-catalog</code>, <code>service-desc</code>,
+        <code>service-doc</code>, <code>describedby</code>.
+      </p>
+    </main>
+  </body>
+</html>
